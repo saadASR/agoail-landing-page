@@ -1,0 +1,151 @@
+/* Responsive design improvements */
+
+/* Mobile-first approach */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-title::after {
+    width: 60px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve accessibility */
+:focus {
+  outline: 2px solid var(--sage-green);
+  outline-offset: 2px;
+}
+
+/* Skip to content link for keyboard users */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 999;
+  background: var(--sage-green);
+  color: white;
+  padding: 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.skip-to-content:focus {
+  left: 0;
+  top: 0;
+}
+
+/* Improve form accessibility */
+input:focus, textarea:focus, button:focus {
+  outline: 2px solid var(--sage-green);
+  outline-offset: 2px;
+}
+
+/* Ensure sufficient color contrast */
+.text-gray-700 {
+  color: #333333; /* Darker than default gray for better contrast */
+}
+
+/* Responsive typography */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+  button, 
+  a.btn-primary, 
+  a.btn-secondary,
+  input[type="submit"] {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+  
+  nav a {
+    padding: 0.75rem;
+    display: inline-block;
+  }
+}
+
+/* Ensure proper spacing in mobile view */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Improve card layouts on mobile */
+@media (max-width: 768px) {
+  .product-card,
+  .testimonial-card {
+    padding: 1rem;
+  }
+}
+
+/* Ensure proper stacking on mobile */
+@media (max-width: 768px) {
+  .flex-col-reverse-mobile {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Ensure proper text alignment on mobile */
+@media (max-width: 768px) {
+  .text-center-mobile {
+    text-align: center;
+  }
+}
+
+/* Improve accessibility with ARIA roles */
+[role="button"],
+[role="tab"] {
+  cursor: pointer;
+}
+
+/* Ensure proper focus states for interactive elements */
+a:focus,
+button:focus,
+[role="button"]:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--sage-green);
+  outline-offset: 2px;
+}
+
+/* Improve screen reader accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
